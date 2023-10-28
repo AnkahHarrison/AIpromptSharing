@@ -2,20 +2,20 @@ import Link from "next/link";
 
 const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
   return (
-    <section className="w-full max-w-full flex-start flex-col">
-      <h1 className="head_text text-left">
+    <section className="flex-col w-full max-w-full flex-start">
+      <h1 className="text-left head_text">
         <span className="blue_gradient">{type} Post</span>
       </h1>
-      <p className="desc text-left max-w-md">
+      <p className="max-w-md text-left desc">
         {type} a post to share with the community. You can share a prompt or
         your response to a prompt.
       </p>
       <form
         onSubmit={handleSubmit}
-        className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism"
+        className="flex flex-col w-full max-w-2xl mt-10 gap-7 glassmorphism"
       >
         <label>
-          <span className="font-satoshi font-semibold text-base text-gray-700">
+          <span className="text-base font-semibold text-gray-700 font-satoshi">
             your prompt{" "}
           </span>
           <textarea
@@ -27,7 +27,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           />
         </label>
         <label>
-          <span className="font-satoshi font-semibold text-base text-gray-700">
+          <span className="text-base font-semibold text-gray-700 font-satoshi">
             Tag{" "}
             <span className="font-normal">
               (#product #webdevelopment #idea)
@@ -41,8 +41,8 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
             className="form_input"
           />
         </label>
-        <div className="flex-end mx-3 mb-5 gap-5">
-          <Link href="/" className="text-gray-500 hover:text-gray-700 text-sm ">
+        <div className="gap-5 mx-3 mb-5 flex-end">
+          <Link href="/" className="text-sm text-gray-500 hover:text-gray-700 ">
             Cancel
           </Link>
           <button
