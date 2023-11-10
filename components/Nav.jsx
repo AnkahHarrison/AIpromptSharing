@@ -26,13 +26,13 @@ const Nav = () => {
     <nav className="w-full pt-3 mb-16 flex-between">
       <Link href="/" className="flex gap-2 flex-center">
         <Image
-          src="/assets/images/logo.svg"
+          src="/assets/images/logo.png"
           alt="logo"
-          width={30}
-          height={30}
+          width={50}
+          height={50}
           className="object-contain"
         />
-        <p className="logo_text">Promptopia</p>
+        <p className="logo_text">Essay Share</p>
       </Link>
       {/* desktop nav */}
       <div className="hidden sm:flex">

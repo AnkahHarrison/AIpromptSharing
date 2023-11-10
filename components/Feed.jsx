@@ -6,7 +6,7 @@ import PromptCard from "./PromptCard";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
-    <div className='mt-16 prompt_layout'>
+    <div className="mt-16 prompt_layout">
       {data.map((post) => (
         <PromptCard
           key={post._id}
@@ -68,15 +68,30 @@ const Feed = () => {
   };
 
   return (
-    <section className='feed'>
-      <form className='relative w-full flex-center'>
+    <section className="feed">
+      <div className="p-8 mt-8 lg:p-0 lg:mt-0">
+        <img
+          src="/assets/images/landing.webp"
+          alt="Landing"
+          className="w-full mb-0 -mt-48 "
+        />
+      </div>
+
+      {/* <img
+        src="/assets/images/landing.webp"
+        alt="Landing"
+        classname="w-full mt-0 mb-0 lg:-mt-24"
+      /> */}
+
+      {/* className="w-full md:w-auto" */}
+      <form className="relative w-full flex-center">
         <input
-          type='text'
-          placeholder='Search for a tag or a username'
+          type="text"
+          placeholder="Search for a tag or a username"
           value={searchText}
           onChange={handleSearchChange}
           required
-          className='search_input peer'
+          className="search_input peer"
         />
       </form>
 
